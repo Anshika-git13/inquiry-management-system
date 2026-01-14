@@ -1,0 +1,172 @@
+# Inquiry Management System - MVP
+
+A simple MERN stack application for managing customer inquiries. Built as an internal tool for tracking inquiries from various sources (Website, WhatsApp, Email, Referral).
+
+## Tech Stack
+
+- **Frontend**: React 18 (with plain CSS)
+- **Backend**: Node.js + Express
+- **Database**: MongoDB with Mongoose ODM
+- **HTTP Client**: Axios
+
+## Features
+
+- Submit new inquiries through a form
+- View all inquiries in a scrollable table
+- Update inquiry status (New → Contacted → Closed)
+- Real-time data synchronization
+- Form validation (both frontend and backend)
+- Clean, responsive UI
+
+## Prerequisites
+
+Before starting, make sure you have these installed:
+
+- **Node.js** (v14 or higher)
+- **npm** (comes with Node.js)
+- **MongoDB**
+
+Verify installation:
+
+```bash
+node --version
+npm --version
+mongosh --version
+```
+
+---
+
+## MongoDB Setup
+
+### MongoDB Atlas (Cloud)
+
+1. Go to [MongoDB Atlas]
+2. Create a free account and cluster
+3. Click "Connect" → "Connect your application"
+4. Copy the connection string
+5. Replace `<password>` with your database password
+
+---
+
+## Backend Setup
+
+### Step 1: Create Project Structure
+
+```
+backend/
+├── config/
+│   └── db.js
+├── controllers/
+│   └── inquiryController.js
+├── models/
+│   └── Inquiry.js
+├── routes/
+│   └── inquiryRoutes.js
+├── .env
+├── package.json
+└── server.js
+```
+
+### Step 2: Install Dependencies
+
+Navigate to the backend folder and run:
+
+```bash
+cd backend
+npm install express mongoose cors dotenv
+npm install --save-dev nodemon
+```
+
+### Step 3: Configure Environment Variables
+
+Create a `.env` file in the backend root:
+
+**For MongoDB Atlas:**
+
+```env
+PORT=5000
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/inquiry_system
+```
+
+Replace `username` and `password` with your Atlas credentials.
+
+### Step 4: Add Backend Code
+
+Copy all the backend code files:
+
+- `server.js` - Main entry point
+- `config/db.js` - Database connection
+- `models/Inquiry.js` - Data schema
+- `controllers/inquiryController.js` - Request handlers
+- `routes/inquiryRoutes.js` - API endpoints
+
+### Step 5: Start Backend Server
+
+```bash
+npm run dev
+```
+
+**Expected output:**
+
+```
+Server running on port 5000
+MongoDB connected successfully
+```
+
+If you see both messages, backend is ready!
+
+**Troubleshooting:**
+
+- If MongoDB connection fails, verify MongoDB is running: `mongosh`
+- If port 5000 is in use, change PORT in `.env`
+
+---
+
+## Frontend Setup
+
+### Step 1: Create React App
+
+```bash
+npx create-react-app inquiry-frontend
+cd frontend
+```
+
+### Step 2: Install Axios
+
+```bash
+npm install axios
+```
+
+### Step 3: Create Folder Structure
+
+```
+frontend/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── InquiryForm.js
+│   │   ├── InquiryForm.css
+│   │   ├── InquiryList.js
+│   │   └── InquiryList.css
+│   ├── services/
+│   │   └── api.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+└── package.json
+```
+
+### Step 4: Add Frontend Code
+
+Copy all the frontend code files into their respective locations.
+
+### Step 5: Start Frontend Server
+
+```bash
+npm start
+```
+
+The app will open automatically at `http://localhost:3000`
+
+---
