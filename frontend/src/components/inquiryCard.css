@@ -1,0 +1,116 @@
+.inquiry-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: white;
+    transition: box-shadow 0.2s;
+}
+
+.inquiry-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.inquiry-card.status-new {
+    border-left: 4px solid #4299e1;
+}
+
+.inquiry-card.status-contacted {
+    border-left: 4px solid #ed8936;
+}
+
+.inquiry-card.status-closed {
+    border-left: 4px solid #48bb78;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.card-header h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin: 0;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.new {
+    background-color: #bee3f8;
+    color: #2c5282;
+}
+
+.status-badge.contacted {
+    background-color: #feebc8;
+    color: #7c2d12;
+}
+
+.status-badge.closed {
+    background-color: #c6f6d5;
+    color: #22543d;
+}
+
+.card-body {
+    margin-bottom: 1rem;
+}
+
+.info-row {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.info-row strong {
+    color: #4a5568;
+    display: inline-block;
+    min-width: 80px;
+}
+
+.message-text {
+    margin-top: 0.5rem;
+    color: #2d3748;
+    line-height: 1.6;
+    background-color: #f7fafc;
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.card-footer label {
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.status-select {
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.status-select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.status-select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

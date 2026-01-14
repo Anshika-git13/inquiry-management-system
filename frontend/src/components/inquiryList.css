@@ -1,0 +1,158 @@
+.inquiry-list-container {
+    width: 100%;
+}
+
+.inquiry-table-wrapper {
+    overflow-x: auto;
+    max-height: 600px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.inquiry-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.inquiry-table thead {
+    background-color: #f7fafc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.inquiry-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.inquiry-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s;
+}
+
+.inquiry-table tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.inquiry-table td {
+    padding: 1rem;
+    vertical-align: top;
+}
+
+.name-cell {
+    font-weight: 500;
+    color: #2d3748;
+    min-width: 120px;
+}
+
+.contact-cell {
+    color: #4a5568;
+    min-width: 180px;
+}
+
+.source-cell {
+    min-width: 100px;
+}
+
+.source-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: #e2e8f0;
+    color: #2d3748;
+}
+
+.message-cell {
+    max-width: 300px;
+    min-width: 200px;
+}
+
+.message-text {
+    color: #4a5568;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.date-cell {
+    color: #718096;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    min-width: 150px;
+}
+
+.status-cell {
+    min-width: 130px;
+}
+
+.status-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.status-select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.status-select.new {
+    background-color: #bee3f8;
+    color: #2c5282;
+    border-color: #90cdf4;
+}
+
+.status-select.contacted {
+    background-color: #feebc8;
+    color: #7c2d12;
+    border-color: #fbd38d;
+}
+
+.status-select.closed {
+    background-color: #c6f6d5;
+    color: #22543d;
+    border-color: #9ae6b4;
+}
+
+.no-inquiries {
+    text-align: center;
+    color: #718096;
+    padding: 3rem;
+    font-size: 1.125rem;
+}
+
+.inquiry-table-wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.inquiry-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.inquiry-table-wrapper::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+.inquiry-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}

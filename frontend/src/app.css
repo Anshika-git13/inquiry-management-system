@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    background-color: #fffafa;
+    color: #333;
+}
+
+.App {
+    min-height: 100vh;
+}
+
+.app-header {
+    background: linear-gradient(135deg, #3e3b39 0%, #3e3b39 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.app-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.form-section {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex: 0 0 400px;
+    position: sticky;
+    top: 2rem;
+}
+
+.list-section {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 0;
+}
+
+.form-section h2,
+.list-section h2 {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 968px) {
+    .app-main {
+        flex-direction: column;
+    }
+
+    .form-section {
+        position: static;
+        flex: 1;
+        width: 100%;
+    }
+}
