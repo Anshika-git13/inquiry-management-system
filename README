@@ -6,7 +6,7 @@ A simple MERN stack application for managing customer inquiries. Built as an int
 
 - **Frontend**: React 18 (with plain CSS)
 - **Backend**: Node.js + Express
-- **Database**: MongoDB with Mongoose ODM
+- **Database**: MongoDB
 - **HTTP Client**: Axios
 
 ## Features
